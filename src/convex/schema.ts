@@ -19,25 +19,39 @@ export type Role = Infer<typeof roleValidator>;
 const schema = defineSchema(
   {
     // default auth tables using convex auth.
-    ...authTables, // do not remove or modify
+    ...authTables,
 
-    // the users table is the default users table that is brought in by the authTables
     users: defineTable({
-      name: v.optional(v.string()), // name of the user. do not remove
-      image: v.optional(v.string()), // image of the user. do not remove
-      email: v.optional(v.string()), // email of the user. do not remove
-      emailVerificationTime: v.optional(v.number()), // email verification time. do not remove
-      isAnonymous: v.optional(v.boolean()), // is the user anonymous. do not remove
+      name: v.optional(v.string()),
+      image: v.optional(v.string()),
+      email: v.optional(v.string()),
+      emailVerificationTime: v.optional(v.number()),
+      isAnonymous: v.optional(v.boolean()),
+      role: v.optional(roleValidator),
+    }).index("email", ["email"]),
 
-      role: v.optional(roleValidator), // role of the user. do not remove
-    }).index("email", ["email"]), // index for the email. do not remove or modify
+    projects: defineTable({
+      title: v.string(),
+      summary: v.string(),
+      description: v.string(),
+      category: v.string(),
+      tags: v.array(v.string()),
+      imageUrl: v.string(),
+      videoUrl: v.optional(v.string()),
+    }).index("by_category", ["category"]),
 
-    // add other tables here
-
-    // tableName: defineTable({
-    //   ...
-    //   // table fields
-    // }).index("by_field", ["field"])
+    founders: defineTable({
+      name: v.string(),
+      role: v.string(),
+      category: v.string(),
+      image: v.string(),
+      bio: v.string(),
+      social: v.optional(v.object({
+        twitter: v.optional(v.string()),
+        linkedin: v.optional(v.string()),
+        github: v.optional(v.string()),
+      })),
+    }).index("by_category", ["category"]),
   },
   {
     schemaValidation: false,
