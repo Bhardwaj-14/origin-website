@@ -84,7 +84,7 @@ export default function Home() {
           className="hidden lg:block fixed right-8 top-1/2 -translate-y-1/2 z-40"
         >
           <BrutalistCard className="p-6 bg-[#FF6A00] text-white max-w-[200px]">
-            <h3 className="font-black text-xl mb-4">One Man Army</h3>
+            <h3 className="font-black text-xl mb-4 text-[#00FF80]">ORIGIN AI</h3>
             <p className="text-sm mb-4">Building the future, one commit at a time.</p>
             <BrutalistButton
               variant="secondary"
@@ -193,11 +193,11 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <BrutalistCard className="p-12 bg-[#00FF80]">
-            <h2 className="text-4xl md:text-6xl font-black mb-6 text-black">
+          <BrutalistCard className="p-12 bg-black dark:bg-[#1a1a1a]">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-[#00FF80]">
               Join the Revolution
             </h2>
-            <p className="text-xl mb-8 text-black opacity-80">
+            <p className="text-xl mb-8 text-[#00FF80] opacity-80">
               Support ORIGIN in building the future of AI
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
