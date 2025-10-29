@@ -17,7 +17,7 @@ export default function BrutalistCard({
   return (
     <motion.div
       className={`
-        border-4 border-black dark:border-white
+        border-2 border-black dark:border-white
         bg-white dark:bg-black
         shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
         dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.3)]

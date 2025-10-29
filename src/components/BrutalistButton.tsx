@@ -39,7 +39,7 @@ export default function BrutalistButton({
       className={`
         ${variants[variant]}
         ${sizes[size]}
-        border-4
+        border-2
         font-bold
         shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
         dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)]

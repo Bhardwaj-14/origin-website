@@ -222,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t-4 border-black dark:border-white py-8 px-4">
+      <footer className="border-t-2 border-black dark:border-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <OriginLogo size="sm" className="mb-4" />
           <p className="text-sm opacity-60">
