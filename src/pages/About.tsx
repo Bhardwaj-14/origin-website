@@ -7,10 +7,8 @@ import { Brain, Rocket, Target, Zap } from "lucide-react";
 export default function About() {
   const timeline = [
     { year: "2024", event: "ORIGIN Founded", desc: "Mission to build AGI systems" },
-    { year: "2024 Q2", event: "ORIGIN AI Core", desc: "First AI model released" },
-    { year: "2024 Q3", event: "ORIGIN OS Alpha", desc: "Operating system preview" },
-    { year: "2024 Q4", event: "Neural Compiler", desc: "Revolutionary dev tool launched" },
-    { year: "2025", event: "Global Expansion", desc: "Scaling to new markets" },
+    { year: "2024 Q2", event: "ORIGIN AI", desc: "First AI model released" },
+    { year: "2024 Q3", event: "ORIGIN OS", desc: "Brainstormed the idea of an AI first OS." },
   ];
 
   const values = [
